@@ -1,0 +1,5 @@
+{% extends "!layout.html" %}
+{%- for cssfile in css_files %}
+<link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css" />
+{%- endfor %}
+
