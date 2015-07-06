@@ -1,0 +1,357 @@
+
+
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Hello World (3) ― フィールド属性 ― &mdash; Field Reports サポートページ</title>
+    
+    <link rel="stylesheet" href="../../_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1.5.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../_static/bizstyle.js"></script>
+    <link rel="top" title="Field Reports サポートページ" href="../../index.html" />
+    <link rel="up" title="スクラッチからの帳票作成" href="index.html" />
+    <link rel="next" title="Hello World (4) ― スタイル指定 ―" href="hello4.html" />
+    <link rel="prev" title="Hello World (2) ― フォントの指定 ―" href="hello2.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="hello4.html" title="Hello World (4) ― スタイル指定 ―"
+             accesskey="N">次へ</a></li>
+        <li class="right" >
+          <a href="hello2.html" title="Hello World (2) ― フォントの指定 ―"
+             accesskey="P">前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Field Reports サポートページ</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Tutorial / チュートリアル</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">スクラッチからの帳票作成</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../../index.html">目次</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../faq/index.html">FAQ / よくある質問</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Tutorial / チュートリアル</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../flow/index.html">PDF帳票作成の流れ</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">スクラッチからの帳票作成</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../template.html">テンプレートを用いた帳票作成</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../recipe.html">Recipe / 調理法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tips.html">Tips / 使いこなしのコツ</a></li>
+</ul>
+
+  <h4>前のトピックへ</h4>
+  <p class="topless"><a href="hello2.html"
+                        title="前の章へ">Hello World (2) ― フォントの指定 ―</a></p>
+  <h4>次のトピックへ</h4>
+  <p class="topless"><a href="hello4.html"
+                        title="次の章へ">Hello World (4) ― スタイル指定 ―</a></p><h3>クイック検索</h3>
+<form class="search" action="../search.html" method="get">
+  <input type="text" name="q" />
+  <input type="submit" value="検索" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form><h3>外部リンク</h3>
+<ul>
+    <li><a class="reference external" href="http://www.field-works.co.jp/">合同会社フィールドワークス</a></li>
+    <li><a class="reference external" href="http://www.field-works.co.jp/製品情報/">製品情報</a></li>
+    <li><a class="reference external" href="http://www.field-works.co.jp/お問い合わせ/">お問い合わせ</a></li>
+    <li><a class="reference external" href="http://labs.field-works.co.jp/">野外実験室</a></li>
+</ul>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="hello-world-3">
+<h1>Hello World (3) ― フィールド属性 ―<a class="headerlink" href="#hello-world-3" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>フィールドには，前回使用したフォント以外にも様々な表示属性が設定できます。</p>
+<div class="section" id="id1">
+<h2>境界線<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>フィールドの境界線に関連する属性として，以下があります。</p>
+<ul class="simple">
+<li>border-width</li>
+<li>border-style</li>
+<li>border-dash</li>
+<li>border-width</li>
+</ul>
+<p>0より大きい数値で境界線の太さを与えると，境界線が表示されます。
+単位はポイント(pt)です。</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="c1">// hello3-1.json</span>
+<span class="p">{</span>
+    <span class="s2">&quot;template&quot;</span><span class="o">:</span> <span class="p">{</span><span class="s2">&quot;paper&quot;</span><span class="o">:</span> <span class="s2">&quot;A4&quot;</span><span class="p">},</span>
+    <span class="s2">&quot;context&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;hello_1&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;new&quot;</span><span class="o">:</span> <span class="s2">&quot;Tx&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;Hello, World!&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;rect&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">700</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">750</span><span class="p">],</span>
+            <span class="s2">&quot;border-width&quot;</span><span class="o">:</span> <span class="mi">1</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;hello_2&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;new&quot;</span><span class="o">:</span> <span class="s2">&quot;Tx&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;Hello, World!&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;rect&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">600</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">650</span><span class="p">],</span>
+            <span class="s2">&quot;border-width&quot;</span><span class="o">:</span> <span class="mi">2</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;hello_3&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;new&quot;</span><span class="o">:</span> <span class="s2">&quot;Tx&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;Hello, World!&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;rect&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">550</span><span class="p">],</span>
+            <span class="s2">&quot;border-width&quot;</span><span class="o">:</span> <span class="mi">3</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;hello_4&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;new&quot;</span><span class="o">:</span> <span class="s2">&quot;Tx&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;Hello, World!&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;rect&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">450</span><span class="p">],</span>
+            <span class="s2">&quot;border-width&quot;</span><span class="o">:</span> <span class="mi">4</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;hello_5&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;new&quot;</span><span class="o">:</span> <span class="s2">&quot;Tx&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;Hello, World!&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;rect&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">350</span><span class="p">],</span>
+            <span class="s2">&quot;border-width&quot;</span><span class="o">:</span> <span class="mi">5</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="figure" id="id3">
+<img alt="../../_images/実行結果3-1.png" src="../../_images/実行結果3-1.png" />
+<p class="caption"><span class="caption-text">実行結果1</span></p>
+</div>
+<div class="section" id="border-style">
+<h3>border-style<a class="headerlink" href="#border-style" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>以下の境界線スタイルがあります。</p>
+<ul class="simple">
+<li>Solid</li>
+<li>Dashed</li>
+<li>Beveled</li>
+<li>Inset</li>
+<li>UnderlineStyle</li>
+</ul>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="c1">// hello3-2.json</span>
+<span class="p">{</span>
+    <span class="s2">&quot;template&quot;</span><span class="o">:</span> <span class="p">{</span><span class="s2">&quot;paper&quot;</span><span class="o">:</span> <span class="s2">&quot;A4&quot;</span><span class="p">},</span>
+    <span class="s2">&quot;context&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;hello_1&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;new&quot;</span><span class="o">:</span> <span class="s2">&quot;Tx&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;Hello, World!&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;rect&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">700</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">750</span><span class="p">],</span>
+            <span class="s2">&quot;border-width&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;border-style&quot;</span><span class="o">:</span> <span class="s2">&quot;Solid&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;hello_2&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;new&quot;</span><span class="o">:</span> <span class="s2">&quot;Tx&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;Hello, World!&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;rect&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">600</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">650</span><span class="p">],</span>
+            <span class="s2">&quot;border-width&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;border-style&quot;</span><span class="o">:</span> <span class="s2">&quot;Dashed&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;hello_3&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;new&quot;</span><span class="o">:</span> <span class="s2">&quot;Tx&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;Hello, World!&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;rect&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">550</span><span class="p">],</span>
+            <span class="s2">&quot;border-width&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;border-style&quot;</span><span class="o">:</span> <span class="s2">&quot;Beveled&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;hello_4&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;new&quot;</span><span class="o">:</span> <span class="s2">&quot;Tx&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;Hello, World!&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;rect&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">450</span><span class="p">],</span>
+            <span class="s2">&quot;border-width&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;border-style&quot;</span><span class="o">:</span> <span class="s2">&quot;Inset&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;hello_5&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;new&quot;</span><span class="o">:</span> <span class="s2">&quot;Tx&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;Hello, World!&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;rect&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">350</span><span class="p">],</span>
+            <span class="s2">&quot;border-width&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;border-style&quot;</span><span class="o">:</span> <span class="s2">&quot;UnderlineStyle&quot;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="figure" id="id4">
+<img alt="../../_images/実行結果3-2.png" src="../../_images/実行結果3-2.png" />
+<p class="caption"><span class="caption-text">実行結果2</span></p>
+</div>
+</div>
+<div class="section" id="border-dash">
+<h3>border-dash<a class="headerlink" href="#border-dash" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>破線のパターンを指定します。</p>
+<p>交互に現れる破線と隙間の間隔を1要素以上の数値リストとして指定します。
+1要素の場合，破線と隙間の長さは同じになります。2要素以上の場合，破線1, 隙間1, 破線2, … の順にそれぞれの長さを指定します。</p>
+<p>例えば，[3, 3, 15, 3]と指定すれば一点鎖線になります。</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="c1">// hello3-3.json</span>
+<span class="p">{</span>
+    <span class="s2">&quot;template&quot;</span><span class="o">:</span> <span class="p">{</span><span class="s2">&quot;paper&quot;</span><span class="o">:</span> <span class="s2">&quot;A4&quot;</span><span class="p">},</span>
+    <span class="s2">&quot;context&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;hello_1&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;new&quot;</span><span class="o">:</span> <span class="s2">&quot;Tx&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;Hello, World!&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;rect&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">700</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">750</span><span class="p">],</span>
+            <span class="s2">&quot;border-width&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;border-style&quot;</span><span class="o">:</span> <span class="s2">&quot;Dashed&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;border-dash&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;hello_2&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;new&quot;</span><span class="o">:</span> <span class="s2">&quot;Tx&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;Hello, World!&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;rect&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">600</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">650</span><span class="p">],</span>
+            <span class="s2">&quot;border-width&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;border-style&quot;</span><span class="o">:</span> <span class="s2">&quot;Dashed&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;border-dash&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">6</span><span class="p">]</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;hello_3&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;new&quot;</span><span class="o">:</span> <span class="s2">&quot;Tx&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;Hello, World!&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;rect&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">550</span><span class="p">],</span>
+            <span class="s2">&quot;border-width&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;border-style&quot;</span><span class="o">:</span> <span class="s2">&quot;Dashed&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;border-dash&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">9</span><span class="p">]</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;hello_4&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;new&quot;</span><span class="o">:</span> <span class="s2">&quot;Tx&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;Hello, World!&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;rect&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">450</span><span class="p">],</span>
+            <span class="s2">&quot;border-width&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;border-style&quot;</span><span class="o">:</span> <span class="s2">&quot;Dashed&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;border-dash&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;hello_5&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;new&quot;</span><span class="o">:</span> <span class="s2">&quot;Tx&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;Hello, World!&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;rect&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">350</span><span class="p">],</span>
+            <span class="s2">&quot;border-width&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;border-style&quot;</span><span class="o">:</span> <span class="s2">&quot;Dashed&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;border-dash&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="figure" id="id5">
+<img alt="../../_images/実行結果3-3.png" src="../../_images/実行結果3-3.png" />
+<p class="caption"><span class="caption-text">実行結果3</span></p>
+</div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>色指定<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>色を指定する属性として以下の3種類があります。</p>
+<ul class="simple">
+<li>color</li>
+<li>border-color</li>
+<li>background-color</li>
+</ul>
+<p>色指定は，システムで定義された Black, Gray, White, Red, Green, … などの16色の名前で指定するか，グレースケール・RGB・CMYKモデルの色成分を数値のリストで指定します。</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="c1">// hello3-4.json</span>
+<span class="p">{</span>
+    <span class="s2">&quot;template&quot;</span><span class="o">:</span> <span class="p">{</span><span class="s2">&quot;paper&quot;</span><span class="o">:</span> <span class="s2">&quot;A4&quot;</span><span class="p">},</span>
+    <span class="s2">&quot;context&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;hello_1&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;new&quot;</span><span class="o">:</span> <span class="s2">&quot;Tx&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;Hello, World!&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;rect&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">700</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">750</span><span class="p">],</span>
+            <span class="s2">&quot;border-width&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;color&quot;</span><span class="o">:</span> <span class="s2">&quot;Red&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;hello_2&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;new&quot;</span><span class="o">:</span> <span class="s2">&quot;Tx&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;Hello, World!&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;rect&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">600</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">650</span><span class="p">],</span>
+            <span class="s2">&quot;border-width&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;border-color&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">]</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;hello_3&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;new&quot;</span><span class="o">:</span> <span class="s2">&quot;Tx&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;Hello, World!&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;rect&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">550</span><span class="p">],</span>
+            <span class="s2">&quot;border-width&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;background-color&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">128</span><span class="p">]</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;hello_4&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;new&quot;</span><span class="o">:</span> <span class="s2">&quot;Tx&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;Hello, World!&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;rect&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">450</span><span class="p">],</span>
+            <span class="s2">&quot;border-width&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;border-color&quot;</span><span class="o">:</span> <span class="s2">&quot;Purple&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;background-color&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">192</span><span class="p">,</span> <span class="mi">192</span><span class="p">,</span> <span class="mi">192</span><span class="p">]</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;hello_5&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;new&quot;</span><span class="o">:</span> <span class="s2">&quot;Tx&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;Hello, World!&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;rect&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">350</span><span class="p">],</span>
+            <span class="s2">&quot;border-width&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;color&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">64</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="mi">192</span><span class="p">],</span>
+            <span class="s2">&quot;border-color&quot;</span><span class="o">:</span> <span class="s2">&quot;Blue&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;background-color&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">192</span><span class="p">,</span> <span class="mi">192</span><span class="p">,</span> <span class="mi">192</span><span class="p">]</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="figure" id="id6">
+<img alt="../../_images/実行結果3-4.png" src="../../_images/実行結果3-4.png" />
+<p class="caption"><span class="caption-text">実行結果4</span></p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="hello4.html" title="Hello World (4) ― スタイル指定 ―"
+             >次へ</a></li>
+        <li class="right" >
+          <a href="hello2.html" title="Hello World (2) ― フォントの指定 ―"
+             >前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Field Reports サポートページ</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Tutorial / チュートリアル</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >スクラッチからの帳票作成</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2015, Field Works, LLC.
+    </div>
+  </body>
+</html>

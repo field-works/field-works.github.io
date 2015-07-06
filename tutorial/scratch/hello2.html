@@ -1,0 +1,251 @@
+
+
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Hello World (2) ― フォントの指定 ― &mdash; Field Reports サポートページ</title>
+    
+    <link rel="stylesheet" href="../../_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1.5.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../_static/bizstyle.js"></script>
+    <link rel="top" title="Field Reports サポートページ" href="../../index.html" />
+    <link rel="up" title="スクラッチからの帳票作成" href="index.html" />
+    <link rel="next" title="Hello World (3) ― フィールド属性 ―" href="hello3.html" />
+    <link rel="prev" title="Hello World (1) ― レンダリング・パラメータ ―" href="hello1.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="hello3.html" title="Hello World (3) ― フィールド属性 ―"
+             accesskey="N">次へ</a></li>
+        <li class="right" >
+          <a href="hello1.html" title="Hello World (1) ― レンダリング・パラメータ ―"
+             accesskey="P">前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Field Reports サポートページ</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Tutorial / チュートリアル</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">スクラッチからの帳票作成</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../../index.html">目次</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../faq/index.html">FAQ / よくある質問</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Tutorial / チュートリアル</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../flow/index.html">PDF帳票作成の流れ</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">スクラッチからの帳票作成</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../template.html">テンプレートを用いた帳票作成</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../recipe.html">Recipe / 調理法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tips.html">Tips / 使いこなしのコツ</a></li>
+</ul>
+
+  <h4>前のトピックへ</h4>
+  <p class="topless"><a href="hello1.html"
+                        title="前の章へ">Hello World (1) ― レンダリング・パラメータ ―</a></p>
+  <h4>次のトピックへ</h4>
+  <p class="topless"><a href="hello3.html"
+                        title="次の章へ">Hello World (3) ― フィールド属性 ―</a></p><h3>クイック検索</h3>
+<form class="search" action="../search.html" method="get">
+  <input type="text" name="q" />
+  <input type="submit" value="検索" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form><h3>外部リンク</h3>
+<ul>
+    <li><a class="reference external" href="http://www.field-works.co.jp/">合同会社フィールドワークス</a></li>
+    <li><a class="reference external" href="http://www.field-works.co.jp/製品情報/">製品情報</a></li>
+    <li><a class="reference external" href="http://www.field-works.co.jp/お問い合わせ/">お問い合わせ</a></li>
+    <li><a class="reference external" href="http://labs.field-works.co.jp/">野外実験室</a></li>
+</ul>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="hello-world-2">
+<h1>Hello World (2) ― フォントの指定 ―<a class="headerlink" href="#hello-world-2" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>前回作成した Hello World を発展させていきます。</p>
+<div class="section" id="id1">
+<h2>標準フォントの指定<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>まずは，フィールドの数を増やした上で，それぞれのフィールドのフォントを指定します。
+フォントを変更するには，各フィールドのfield辞書にfont属性を追加します。</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="c1">// hello2.json</span>
+<span class="p">{</span>
+    <span class="s2">&quot;template&quot;</span><span class="o">:</span> <span class="p">{</span><span class="s2">&quot;paper&quot;</span><span class="o">:</span> <span class="s2">&quot;A4&quot;</span><span class="p">},</span>
+    <span class="s2">&quot;context&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;hello_1&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;new&quot;</span><span class="o">:</span> <span class="s2">&quot;Tx&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;Hello, World!&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;rect&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">700</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">750</span><span class="p">],</span>
+            <span class="s2">&quot;font&quot;</span><span class="o">:</span> <span class="s2">&quot;/Times-Roman&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;hello_2&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;new&quot;</span><span class="o">:</span> <span class="s2">&quot;Tx&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;Hello, World!&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;rect&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">600</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">650</span><span class="p">],</span>
+            <span class="s2">&quot;font&quot;</span><span class="o">:</span> <span class="s2">&quot;/Helvetica-Oblique&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;hello_3&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;new&quot;</span><span class="o">:</span> <span class="s2">&quot;Tx&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;Hello, World!&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;rect&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">550</span><span class="p">],</span>
+            <span class="s2">&quot;font&quot;</span><span class="o">:</span> <span class="s2">&quot;/Courier-Bold&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;hello_4&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;new&quot;</span><span class="o">:</span> <span class="s2">&quot;Tx&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;ABCDEFGHIJKLMN&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;rect&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">450</span><span class="p">],</span>
+            <span class="s2">&quot;font&quot;</span><span class="o">:</span> <span class="s2">&quot;/ZapfDingbats&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;hello_5&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;new&quot;</span><span class="o">:</span> <span class="s2">&quot;Tx&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;こんにちは世界&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;rect&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">350</span><span class="p">],</span>
+            <span class="s2">&quot;font&quot;</span><span class="o">:</span> <span class="s2">&quot;/KozGo-Medium&quot;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="figure" id="id3">
+<img alt="../../_images/実行結果2-1.png" src="../../_images/実行結果2-1.png" />
+<p class="caption"><span class="caption-text">実行結果1</span></p>
+</div>
+<p>Field Reports 1.4では，14種類の欧文フォントと2種類の日本語フォントを標準フォントとして内蔵しています。これらの標準フォントであれば，前準備なしに単にフォント名を指定するだけで使用することができます。</p>
+<p>日本語を表示する場合は，小塚明朝体フォントか小塚ゴシック体フォントを指定します。
+フォントの指定を省略した場合は，小塚明朝体フォントがデフォルトとなります。</p>
+</div>
+<div class="section" id="id2">
+<h2>フォント・リソースの定義<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>標準以外のフォントを使いたい場合は，フォントファイルを元にフォントリソースを定義し，そのリソース名をフィールドのフォント名として指定します。</p>
+<p>reports コマンドを使って，フォントリソースの雛形を作らせることもできます。</p>
+<div class="highlight-python"><div class="highlight"><pre>$ reports font --json HiraMaruGo_Pro_W4.otf
+</pre></div>
+</div>
+<p>作成したパラメータファイルと実行結果を以下に示します。</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="c1">// hello2-2.json</span>
+<span class="p">{</span>
+    <span class="s2">&quot;resources&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;font&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="c1">// ヒラギノ丸ゴシック</span>
+            <span class="s2">&quot;HiraMaruPro-W4&quot;</span><span class="o">:</span> <span class="p">{</span>
+                <span class="s2">&quot;src&quot;</span><span class="o">:</span> <span class="s2">&quot;./HiraMaruGo_Pro_W4.otf&quot;</span>
+            <span class="p">},</span>
+            <span class="c1">// 衡山毛筆フォント</span>
+            <span class="s2">&quot;KouzanBrushFontSousyoOTF&quot;</span><span class="o">:</span> <span class="p">{</span>
+                <span class="s2">&quot;src&quot;</span><span class="o">:</span> <span class="s2">&quot;./KouzanSoushoOTF.otf&quot;</span>
+            <span class="p">},</span>
+            <span class="c1">// たぬき油性マジック</span>
+            <span class="s2">&quot;Tanuki-Permanent-Marker&quot;</span><span class="o">:</span> <span class="p">{</span>
+                <span class="s2">&quot;src&quot;</span><span class="o">:</span> <span class="s2">&quot;./TanukiMagic.ttf&quot;</span>
+            <span class="p">},</span>
+            <span class="c1">// IPAmj明朝フォント</span>
+            <span class="s2">&quot;IPAmjMincho&quot;</span><span class="o">:</span> <span class="p">{</span>
+                <span class="s2">&quot;src&quot;</span><span class="o">:</span> <span class="s2">&quot;./ipamjm.ttf&quot;</span>
+            <span class="p">},</span>
+            <span class="c1">// MS明朝フォント</span>
+            <span class="s2">&quot;MS-Mincho&quot;</span><span class="o">:</span> <span class="p">{</span>
+                <span class="s2">&quot;src&quot;</span><span class="o">:</span> <span class="s2">&quot;./msmin04.ttc&quot;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;template&quot;</span><span class="o">:</span> <span class="p">{</span><span class="s2">&quot;paper&quot;</span><span class="o">:</span> <span class="s2">&quot;A4&quot;</span><span class="p">},</span>
+    <span class="s2">&quot;context&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;hello_1&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;new&quot;</span><span class="o">:</span> <span class="s2">&quot;Tx&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;こんにちは世界&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;rect&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">700</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">750</span><span class="p">],</span>
+            <span class="s2">&quot;font&quot;</span><span class="o">:</span> <span class="s2">&quot;HiraMaruPro-W4&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;hello_2&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;new&quot;</span><span class="o">:</span> <span class="s2">&quot;Tx&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;こんにちは世界&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;rect&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">600</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">650</span><span class="p">],</span>
+            <span class="s2">&quot;font&quot;</span><span class="o">:</span> <span class="s2">&quot;KouzanBrushFontSousyoOTF&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;hello_3&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;new&quot;</span><span class="o">:</span> <span class="s2">&quot;Tx&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;こんにちは世界&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;rect&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">550</span><span class="p">],</span>
+            <span class="s2">&quot;font&quot;</span><span class="o">:</span> <span class="s2">&quot;Tanuki-Permanent-Marker&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;hello_4&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;new&quot;</span><span class="o">:</span> <span class="s2">&quot;Tx&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;こんにちは世界&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;rect&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">450</span><span class="p">],</span>
+            <span class="s2">&quot;font&quot;</span><span class="o">:</span> <span class="s2">&quot;IPAmjMincho&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;hello_5&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;new&quot;</span><span class="o">:</span> <span class="s2">&quot;Tx&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;こんにちは世界&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;rect&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">350</span><span class="p">],</span>
+            <span class="s2">&quot;font&quot;</span><span class="o">:</span> <span class="s2">&quot;MS-Mincho&quot;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="figure" id="id4">
+<img alt="../../_images/実行結果2-2.png" src="../../_images/実行結果2-2.png" />
+<p class="caption"><span class="caption-text">実行結果2</span></p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="hello3.html" title="Hello World (3) ― フィールド属性 ―"
+             >次へ</a></li>
+        <li class="right" >
+          <a href="hello1.html" title="Hello World (1) ― レンダリング・パラメータ ―"
+             >前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Field Reports サポートページ</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Tutorial / チュートリアル</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >スクラッチからの帳票作成</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2015, Field Works, LLC.
+    </div>
+  </body>
+</html>

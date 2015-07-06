@@ -1,0 +1,363 @@
+
+
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Hello World (5) ― テキスト属性 ― &mdash; Field Reports サポートページ</title>
+    
+    <link rel="stylesheet" href="../../_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1.5.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../_static/bizstyle.js"></script>
+    <link rel="top" title="Field Reports サポートページ" href="../../index.html" />
+    <link rel="up" title="スクラッチからの帳票作成" href="index.html" />
+    <link rel="next" title="テンプレートを用いた帳票作成" href="../template.html" />
+    <link rel="prev" title="Hello World (4) ― スタイル指定 ―" href="hello4.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../template.html" title="テンプレートを用いた帳票作成"
+             accesskey="N">次へ</a></li>
+        <li class="right" >
+          <a href="hello4.html" title="Hello World (4) ― スタイル指定 ―"
+             accesskey="P">前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Field Reports サポートページ</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Tutorial / チュートリアル</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">スクラッチからの帳票作成</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../../index.html">目次</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../faq/index.html">FAQ / よくある質問</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Tutorial / チュートリアル</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../flow/index.html">PDF帳票作成の流れ</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">スクラッチからの帳票作成</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../template.html">テンプレートを用いた帳票作成</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../recipe.html">Recipe / 調理法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tips.html">Tips / 使いこなしのコツ</a></li>
+</ul>
+
+  <h4>前のトピックへ</h4>
+  <p class="topless"><a href="hello4.html"
+                        title="前の章へ">Hello World (4) ― スタイル指定 ―</a></p>
+  <h4>次のトピックへ</h4>
+  <p class="topless"><a href="../template.html"
+                        title="次の章へ">テンプレートを用いた帳票作成</a></p><h3>クイック検索</h3>
+<form class="search" action="../search.html" method="get">
+  <input type="text" name="q" />
+  <input type="submit" value="検索" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form><h3>外部リンク</h3>
+<ul>
+    <li><a class="reference external" href="http://www.field-works.co.jp/">合同会社フィールドワークス</a></li>
+    <li><a class="reference external" href="http://www.field-works.co.jp/製品情報/">製品情報</a></li>
+    <li><a class="reference external" href="http://www.field-works.co.jp/お問い合わせ/">お問い合わせ</a></li>
+    <li><a class="reference external" href="http://labs.field-works.co.jp/">野外実験室</a></li>
+</ul>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="hello-world-5">
+<h1>Hello World (5) ― テキスト属性 ―<a class="headerlink" href="#hello-world-5" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>主なテキスト属性を使ってみましょう。</p>
+<div class="section" id="id1">
+<h2>単数行<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>text-align属性とvertical-align属性により，単数行テキストでの整列方法を指定します。</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="c1">// hello5-1.json</span>
+<span class="p">{</span>
+    <span class="s2">&quot;template&quot;</span><span class="o">:</span> <span class="p">{</span><span class="s2">&quot;paper&quot;</span><span class="o">:</span> <span class="s2">&quot;A4&quot;</span><span class="p">},</span>
+    <span class="s2">&quot;context&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;hello&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;new&quot;</span><span class="o">:</span> <span class="s2">&quot;Tx&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;rect&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">700</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">750</span><span class="p">],</span>
+                <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;左寄せ&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;text-align&quot;</span><span class="o">:</span> <span class="s2">&quot;Left&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;new&quot;</span><span class="o">:</span> <span class="s2">&quot;Tx&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;rect&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">600</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">650</span><span class="p">],</span>
+                <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;中央寄せ&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;text-align&quot;</span><span class="o">:</span> <span class="s2">&quot;Center&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;new&quot;</span><span class="o">:</span> <span class="s2">&quot;Tx&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;rect&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">550</span><span class="p">],</span>
+                <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;右寄せ&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;text-align&quot;</span><span class="o">:</span> <span class="s2">&quot;Right&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;new&quot;</span><span class="o">:</span> <span class="s2">&quot;Tx&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;rect&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">450</span><span class="p">],</span>
+                <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;均等割付&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;text-align&quot;</span><span class="o">:</span> <span class="s2">&quot;Justify&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;new&quot;</span><span class="o">:</span> <span class="s2">&quot;Tx&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;rect&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">350</span><span class="p">],</span>
+                <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;省略時左寄せ&quot;</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;style&quot;</span><span class="o">:</span> <span class="p">[</span>
+        <span class="p">{</span><span class="s2">&quot;hello.*&quot;</span><span class="o">:</span> <span class="p">{</span><span class="s2">&quot;font-size&quot;</span><span class="o">:</span> <span class="mi">18</span><span class="p">,</span>
+                     <span class="s2">&quot;border-width&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">}}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="figure" id="id3">
+<img alt="../../_images/実行結果5-1.png" src="../../_images/実行結果5-1.png" />
+<p class="caption"><span class="caption-text">実行結果1</span></p>
+</div>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="c1">// hello5-2.json</span>
+<span class="p">{</span>
+    <span class="s2">&quot;template&quot;</span><span class="o">:</span> <span class="p">{</span><span class="s2">&quot;paper&quot;</span><span class="o">:</span> <span class="s2">&quot;A4&quot;</span><span class="p">},</span>
+    <span class="s2">&quot;context&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;hello&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;new&quot;</span><span class="o">:</span> <span class="s2">&quot;Tx&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;rect&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">700</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">750</span><span class="p">],</span>
+                <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;垂直上寄せ&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;vertical-align&quot;</span><span class="o">:</span> <span class="s2">&quot;Top&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;new&quot;</span><span class="o">:</span> <span class="s2">&quot;Tx&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;rect&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">600</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">650</span><span class="p">],</span>
+                <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;垂直中央寄せ&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;vertical-align&quot;</span><span class="o">:</span> <span class="s2">&quot;Middle&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;new&quot;</span><span class="o">:</span> <span class="s2">&quot;Tx&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;rect&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">550</span><span class="p">],</span>
+                <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;垂直下寄せ&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;vertical-align&quot;</span><span class="o">:</span> <span class="s2">&quot;Bottom&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;new&quot;</span><span class="o">:</span> <span class="s2">&quot;Tx&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;rect&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">450</span><span class="p">],</span>
+                <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;省略時中央寄せ&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;new&quot;</span><span class="o">:</span> <span class="s2">&quot;Tx&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;rect&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">350</span><span class="p">],</span>
+                <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;左上寄せ&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;text-align&quot;</span><span class="o">:</span> <span class="s2">&quot;Left&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;vertical-align&quot;</span><span class="o">:</span> <span class="s2">&quot;Top&quot;</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;style&quot;</span><span class="o">:</span> <span class="p">[</span>
+        <span class="p">{</span><span class="s2">&quot;hello.*&quot;</span><span class="o">:</span> <span class="p">{</span><span class="s2">&quot;font-size&quot;</span><span class="o">:</span> <span class="mi">18</span><span class="p">,</span>
+                     <span class="s2">&quot;text-align&quot;</span><span class="o">:</span> <span class="s2">&quot;Center&quot;</span><span class="p">,</span>
+                     <span class="s2">&quot;border-width&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">}}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="figure" id="id4">
+<img alt="../../_images/実行結果5-2.png" src="../../_images/実行結果5-2.png" />
+<p class="caption"><span class="caption-text">実行結果2</span></p>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>複数行<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>multiline属性にtrueを設定すると，複数行テキストとして表示します。
+line-height属性により，改行幅を設定します。
+改行幅はフォントサイズの倍率で指定しますので，フォントサイズが14pt，改行幅が1.5であれば，次の行は21pt下になります（行間の隙間が7ptになる）。</p>
+<p>複数行モードでは，テキスト中に改行コードがあると，その位置で改行します。</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="c1">// hello5-3.json</span>
+<span class="p">{</span>
+    <span class="s2">&quot;template&quot;</span><span class="o">:</span> <span class="p">{</span><span class="s2">&quot;paper&quot;</span><span class="o">:</span> <span class="s2">&quot;A4&quot;</span><span class="p">},</span>
+    <span class="s2">&quot;context&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;hello&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;new&quot;</span><span class="o">:</span> <span class="s2">&quot;Tx&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;rect&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">600</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">750</span><span class="p">]</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;new&quot;</span><span class="o">:</span> <span class="s2">&quot;Tx&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;rect&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">550</span><span class="p">],</span>
+                <span class="s2">&quot;text-align&quot;</span><span class="o">:</span> <span class="s2">&quot;Center&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;line-height&quot;</span><span class="o">:</span> <span class="mf">1.5</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;style&quot;</span><span class="o">:</span> <span class="p">[</span>
+        <span class="p">{</span><span class="s2">&quot;hello.*&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;font-size&quot;</span><span class="o">:</span> <span class="mi">14</span><span class="p">,</span>
+            <span class="s2">&quot;border-width&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;「遊ぼう」っていうと 「遊ぼう」っていう。\n「馬鹿」ってい</span>
+<span class="s2">              うと 「馬鹿」っていう。\n「もう遊ばない」っていうと 「遊ばな</span>
+<span class="s2">              い」っていう。\n\nそうして、あとで 寂しくなって、\n「ごめんね」っ</span>
+<span class="s2">              ていうと 「ごめんね」っていう。\nこだまでしょうか、いいえ、誰で</span>
+<span class="s2">              も。&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;multiline&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="figure" id="id5">
+<img alt="../../_images/実行結果5-3.png" src="../../_images/実行結果5-3.png" />
+<p class="caption"><span class="caption-text">実行結果3</span></p>
+</div>
+<p>行の長さがフィールドの幅を超える場合は，自動的に行を分割します。</p>
+<p>行の分割の際には，日本語の禁則処理を行います。
+さらに，複数行でtext-align属性が&#8221;Justify&#8221;に設定されると，行の右端がそろうように文字間スペースを調節します。</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="c1">// hello5-4.json</span>
+<span class="p">{</span>
+    <span class="s2">&quot;template&quot;</span><span class="o">:</span> <span class="p">{</span><span class="s2">&quot;paper&quot;</span><span class="o">:</span> <span class="s2">&quot;A4&quot;</span><span class="p">},</span>
+    <span class="s2">&quot;context&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;hello&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;new&quot;</span><span class="o">:</span> <span class="s2">&quot;Tx&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;rect&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">560</span><span class="p">,</span> <span class="mi">800</span><span class="p">]</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;new&quot;</span><span class="o">:</span> <span class="s2">&quot;Tx&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;rect&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">560</span><span class="p">,</span> <span class="mi">450</span><span class="p">],</span>
+                <span class="s2">&quot;text-align&quot;</span><span class="o">:</span> <span class="s2">&quot;Justify&quot;</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;style&quot;</span><span class="o">:</span> <span class="p">[</span>
+        <span class="p">{</span><span class="s2">&quot;hello.*&quot;</span><span class="o">:</span> <span class="p">{</span><span class="s2">&quot;font-size&quot;</span><span class="o">:</span> <span class="mi">15</span><span class="p">,</span>
+                     <span class="s2">&quot;border-width&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                     <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;作者はさっき、「下人が雨やみを待っていた」と書い</span>
+<span class="s2">                       た。しかし、下人は雨がやんでも、格別どうしようと云う当て</span>
+<span class="s2">                       はない。ふだんなら、勿論、主人の家へ帰る可き筈である。所</span>
+<span class="s2">                       がその主人からは、四五日前に暇を出された。前にも書いたよ</span>
+<span class="s2">                       うに、当時京都の町は一通りならず衰微していた。今この下人</span>
+<span class="s2">                       が、永年、使われていた主人から、暇を出されたのも、実はこ</span>
+<span class="s2">                       の衰微の小さな余波にほかならない。だから「下人が雨やみを</span>
+<span class="s2">                       待っていた」と云うよりも「雨にふりこめられた下人が、行き</span>
+<span class="s2">                       所がなくて、途方にくれていた」と云う方が、適当である。そ</span>
+<span class="s2">                       の上、今日の空模様も少からず、この平安朝の下人の</span>
+<span class="s2">                       Sentimentalismeに影響した。申の刻下りからふり出した雨</span>
+<span class="s2">                       は、いまだに上るけしきがない。そこで、下人は、何をおいて</span>
+<span class="s2">                       も差当り明日の暮しをどうにかしようとして——云わばどうに</span>
+<span class="s2">                       もならない事を、どうにかしようとして、とりとめもない考え</span>
+<span class="s2">                       をたどりながら、さっきから朱雀大路にふる雨の音を、聞くと</span>
+<span class="s2">                       もなく聞いていたのである。&quot;</span><span class="p">,</span>
+                     <span class="s2">&quot;line-height&quot;</span><span class="o">:</span> <span class="mf">1.5</span><span class="p">,</span>
+                     <span class="s2">&quot;multiline&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">}}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="figure" id="id6">
+<img alt="../../_images/実行結果5-4.png" src="../../_images/実行結果5-4.png" />
+<p class="caption"><span class="caption-text">実行結果4</span></p>
+</div>
+<p>英文の場合は，基本的に単語間スペースの位置で行を分割します。</p>
+<p>text-align属性がtrueであれば，単語の終わりの位置で右端を揃えます。
+さらに，hyphens属性を&#8221;Auto&#8221;に設定すると，ハイフネーション処理を行います。</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="c1">// hello5-5.json</span>
+<span class="p">{</span>
+    <span class="s2">&quot;template&quot;</span><span class="o">:</span> <span class="p">{</span><span class="s2">&quot;paper&quot;</span><span class="o">:</span> <span class="s2">&quot;A4&quot;</span><span class="p">},</span>
+    <span class="s2">&quot;context&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;hello&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;new&quot;</span><span class="o">:</span> <span class="s2">&quot;Tx&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;rect&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">550</span><span class="p">,</span> <span class="mi">800</span><span class="p">]</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;new&quot;</span><span class="o">:</span> <span class="s2">&quot;Tx&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;rect&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">550</span><span class="p">,</span> <span class="mi">450</span><span class="p">],</span>
+                <span class="s2">&quot;text-align&quot;</span><span class="o">:</span> <span class="s2">&quot;Justify&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;hyphens&quot;</span><span class="o">:</span> <span class="s2">&quot;Auto&quot;</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;style&quot;</span><span class="o">:</span> <span class="p">[</span>
+        <span class="p">{</span><span class="s2">&quot;hello.*&quot;</span><span class="o">:</span> <span class="p">{</span><span class="s2">&quot;font-size&quot;</span><span class="o">:</span> <span class="mi">18</span><span class="p">,</span>
+                     <span class="s2">&quot;font&quot;</span><span class="o">:</span> <span class="s2">&quot;/Times-Roman&quot;</span><span class="p">,</span>
+                     <span class="s2">&quot;border-width&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                     <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;Alice was beginning to get very tired of sitting</span>
+<span class="s2">                       by her sister on the bank, and of having nothing to do:</span>
+<span class="s2">                       once or twice she had peeped into the book her sister</span>
+<span class="s2">                       was reading, but it had no pictures or conversations in</span>
+<span class="s2">                       it, `and what is the use of a book,&#39; thought Alice</span>
+<span class="s2">                       `without pictures or conversation?&#39;\n\nSo she was</span>
+<span class="s2">                       considering in her own mind (as well as she could, for</span>
+<span class="s2">                           the hot day made her feel very sleepy and stupid),</span>
+<span class="s2">                     whether the pleasure of making a daisy-chain would be</span>
+<span class="s2">                       worth the trouble of getting up and picking the daisies,</span>
+<span class="s2">                     when suddenly a White Rabbit with pink eyes ran close by</span>
+<span class="s2">                       her.&quot;</span><span class="p">,</span>
+                     <span class="s2">&quot;line-height&quot;</span><span class="o">:</span> <span class="mf">1.5</span><span class="p">,</span>
+                     <span class="s2">&quot;multiline&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">}}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="figure" id="id7">
+<img alt="../../_images/実行結果5-5.png" src="../../_images/実行結果5-5.png" />
+<p class="caption"><span class="caption-text">実行結果5</span></p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../template.html" title="テンプレートを用いた帳票作成"
+             >次へ</a></li>
+        <li class="right" >
+          <a href="hello4.html" title="Hello World (4) ― スタイル指定 ―"
+             >前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Field Reports サポートページ</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Tutorial / チュートリアル</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >スクラッチからの帳票作成</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2015, Field Works, LLC.
+    </div>
+  </body>
+</html>
