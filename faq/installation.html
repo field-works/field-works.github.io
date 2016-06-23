@@ -3,7 +3,7 @@
 <!doctype html>
 
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
@@ -56,7 +56,7 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">FAQ / よくある質問</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="general.html">ご購入にあたっての質問</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">インストールに関する質問</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">インストールに関する質問</a></li>
 <li class="toctree-l2"><a class="reference internal" href="usage.html">利用方法</a></li>
 </ul>
 </li>
@@ -110,9 +110,9 @@
 <h2><a class="toc-backref" href="#id5">PythonのDistributeのインストールに失敗します</a><a class="headerlink" href="#pythondistribute" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>Pythonをソースからビルドした場合，ビルド時の環境によってはzlibモジュールが組み込まれないことがあるようです。
 その場合には，以下のようなエラーメッセージが出力されます。</p>
-<div class="highlight-python"><div class="highlight"><pre>File &quot;/usr/local/lib/python2.7/zipfile.py&quot;, line 651, in __init__
-  &quot;Compression requires the (missing) zlib module&quot;
-RuntimeError: Compression requires the (missing) zlib module
+<div class="highlight-default"><div class="highlight"><pre><span class="n">File</span> <span class="s">&quot;/usr/local/lib/python2.7/zipfile.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">651</span><span class="p">,</span> <span class="ow">in</span> <span class="n">__init__</span>
+  <span class="s">&quot;Compression requires the (missing) zlib module&quot;</span>
+<span class="ne">RuntimeError</span><span class="p">:</span> <span class="n">Compression</span> <span class="n">requires</span> <span class="n">the</span> <span class="p">(</span><span class="n">missing</span><span class="p">)</span> <span class="n">zlib</span> <span class="n">module</span>
 </pre></div>
 </div>
 <p>以下に示す方法で，Pythonをインストールし直してください。</p>
@@ -120,13 +120,13 @@ RuntimeError: Compression requires the (missing) zlib module
 <li>zlibのヘッダファイルとライブラリをインストールする。</li>
 </ol>
 <p>CentOSの場合，“zlib-devel”というパッケージ名で導入できます（Debian系では“zlib1g-dev“）。</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="c"># yum install zlib-devel</span>
+<div class="highlight-default"><div class="highlight"><pre><span class="c"># yum install zlib-devel</span>
 </pre></div>
 </div>
 <ol class="arabic simple" start="2">
 <li>Pythonを再ビルドする。</li>
 </ol>
-<div class="highlight-python"><div class="highlight"><pre><span class="c"># ./configure</span>
+<div class="highlight-default"><div class="highlight"><pre><span class="c"># ./configure</span>
 <span class="c"># make</span>
 <span class="c"># make install</span>
 </pre></div>
@@ -145,39 +145,39 @@ RuntimeError: Compression requires the (missing) zlib module
 <h2><a class="toc-backref" href="#id7">Linux版のインストール時にlibcurl関連のエラーが発生します</a><a class="headerlink" href="#linuxlibcurl" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>Field Reportsはlibcurlに依存しています。
 libcurlパッケージがインストールされていないと，インストール時に下記のようなエラーが出力されます。</p>
-<div class="highlight-python"><div class="highlight"><pre>$ sudo rpm -ivh reports-1.4-3.x86_64.rpm
+<div class="highlight-default"><div class="highlight"><pre>$ sudo rpm -ivh reports-1.4-3.x86_64.rpm
 エラー: Failed dependencies:
     libcurl.so.4()(64bit) is needed by reports-1.4-3.x86_64
 </pre></div>
 </div>
 <p>ご使用中のLinuxディストリビューションで利用できるパッケージ管理ツールを使ってlibcurlをインストールしてください。</p>
 <p>CentOSでの実行例:</p>
-<div class="highlight-python"><div class="highlight"><pre>$ sudo yum install curl-devel
+<div class="highlight-default"><div class="highlight"><pre>$ sudo yum install curl-devel
 </pre></div>
 </div>
 <p>自前でlibcurlをインストールした場合には，rpmコマンドに“&#8211;nodeps”オプションを付けて実行してください。</p>
-<div class="highlight-python"><div class="highlight"><pre>$ sudo rpm -ivh --nodeps reports-x.x-x.xxxx.rpm
+<div class="highlight-default"><div class="highlight"><pre>$ sudo rpm -ivh --nodeps reports-x.x-x.xxxx.rpm
 </pre></div>
 </div>
 </div>
 <div class="section" id="rpm">
 <h2><a class="toc-backref" href="#id8">rpmコマンドでバージョンアップできません</a><a class="headerlink" href="#rpm" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>旧バージョンのField Reportsをアンインストールしてから新バージョンをインストールしてください。</p>
-<div class="highlight-python"><div class="highlight"><pre>$ sudo rpm -e reports
+<div class="highlight-default"><div class="highlight"><pre>$ sudo rpm -e reports
 </pre></div>
 </div>
 </div>
 <div class="section" id="pythonbridge">
 <h2><a class="toc-backref" href="#id9">Python言語Bridgeのインポートに失敗します</a><a class="headerlink" href="#pythonbridge" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>field.reportsライブラリのインポート時に次のような例外が発生することがあります。</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">field.reports</span>
+<div class="highlight-default"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">field.reports</span>
 <span class="gt">Traceback (most recent call last):</span>
   File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
 <span class="gr">ImportError</span>: <span class="n">/usr/lib/python2.6/site-packages/field.reports-1.5-py2.6-linux-x86_64.egg/field/reports.so: undefined symbol: PyUnicodeUCS2_AsUTF8String</span>
 </pre></div>
 </div>
 <p>そのような場合には，Python言語Bridgeをソースからビルドしてインストールしなおしてください。</p>
-<div class="highlight-python"><div class="highlight"><pre>$ tar xvzf field.reports-x.x.tar.gz
+<div class="highlight-default"><div class="highlight"><pre>$ tar xvzf field.reports-x.x.tar.gz
 $ cd field.reports-x.x
 $ sudo python setup.py install
 </pre></div>
@@ -192,11 +192,11 @@ $ sudo python setup.py install
 <p>コンソールからreportsコマンドを実行したときは(TRIAL)の文字が消えるがPHP等から実行した時には消えない場合には， 初期設定ファイルのアクセス権限をご確認ください。
 PHPはApacheなどのWebサーバのプロセスから実行されます。
 Webサーバの実行ユーザ（apache, http, wwwなど）から初期設定ファイルが見えない設定になっていないか確認してください。</p>
-<div class="highlight-python"><div class="highlight"><pre>$ ls -l /etc/reports.conf
+<div class="highlight-default"><div class="highlight"><pre>$ ls -l /etc/reports.conf
 </pre></div>
 </div>
 <p>読み出しの実行権限が不足しているようでしたら， chmodでアクセス権を追加するか， chownでオーナーを変更するなどしてアクセス権限を与えてください。</p>
-<div class="highlight-python"><div class="highlight"><pre>$ sudo chmod a+r /etc/reports.conf
+<div class="highlight-default"><div class="highlight"><pre>$ sudo chmod a+r /etc/reports.conf
 </pre></div>
 </div>
 <ol class="arabic simple" start="2">
