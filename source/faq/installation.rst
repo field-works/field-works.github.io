@@ -113,7 +113,7 @@ Webサーバの実行ユーザ（apache, http, wwwなど）から初期設定フ
 
     $ ls -l /etc/reports.conf
 
-読み出しの実行権限が不足しているようでしたら， chmodでアクセス権を追加するか， chownでオーナーを変更するなどしてアクセス権限を与えてください。
+読み出しの実行権限が不足しているようでしたら，chmodでアクセス権を追加するか，chownでオーナーを変更するなどしてアクセス権限を与えてください。
 
 ::
 
@@ -154,3 +154,22 @@ alienというコマンドを使用するのが簡単です。
 - 環境変数 LD_LIBRARY_PATH を用いて，個人単位のパスを設定する。
 - /etc/ld.so.conf にシステム全体の設定を追加する。
 
+CentOS 7へのインストール時にエラーが発生します
+-----------------------------------------------
+
+CentOS 7.xまたはRedHat Linux 7.xにField Reportsをインストールする際に，下記のようなエラーが発生する場合があります。
+
+::
+
+    # rpm -ivh reports-1.5.2-x86_64.rpm 
+    Preparing...                          ################################# [100%]
+    file /usr/bin from install of reports-1.5.2-0.x86_64 conflicts with file from package filesystem-3.2-18.el7.x86_64
+    file /usr/lib64 from install of reports-1.5.2-0.x86_64 conflicts with file from package filesystem-3.2-18.el7.x86_64﻿
+
+インストール先の/usr/binなどのディレクトリのパーミッションが，rpmをパッケージしたときの想定と異なる場合にこのようなエラーが発生するようです。
+
+rpmコマンドに ``--force`` オプションまたは ``--replacefiles`` オプションを付けることでエラーを回避できます。
+
+::
+
+    # rpm --force -ivh reports-1.5.2-x86_64.rpm 

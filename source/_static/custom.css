@@ -10,3 +10,11 @@ p.caption {
   font-size: 80%;
   margin: 1em 0;
 }
+
+body {
+    line-height: 160%;
+}
+
+li {
+    line-height: 180%;
+}
