@@ -1,0 +1,166 @@
+
+
+<!doctype html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Hello World (1) ― レンダリング・パラメータ ― &#8212; Field Reports サポートページ</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bizstyle.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <script src="../../_static/bizstyle.js"></script>
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="Hello World (2) ― フォントの指定 ―" href="hello2.html" />
+    <link rel="prev" title="スクラッチからの帳票作成" href="index.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="hello2.html" title="Hello World (2) ― フォントの指定 ―"
+             accesskey="N">次へ</a></li>
+        <li class="right" >
+          <a href="index.html" title="スクラッチからの帳票作成"
+             accesskey="P">前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Field Reports サポートページ</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Tutorial / チュートリアル</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">スクラッチからの帳票作成</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Hello World (1) ― レンダリング・パラメータ ―</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="hello-world-1">
+<h1>Hello World (1) ― レンダリング・パラメータ ―<a class="headerlink" href="#hello-world-1" title="この見出しへのパーマリンク">¶</a></h1>
+<p>Field Reports付属のreportsコマンドを使って，Hello World を作成します。</p>
+<section id="id1">
+<h2>レンダリング・パラメータの作成<a class="headerlink" href="#id1" title="この見出しへのパーマリンク">¶</a></h2>
+<p>最初にレンダリング・パラメータを作成します。
+以下の内容のテキストファイルを作り“hello1.json”というファイル名で保存します。</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// hello1.json</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;template&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="s2">&quot;paper&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;A4&quot;</span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;context&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;hello&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;new&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Tx&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;value&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Hello, World!&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;rect&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="mf">100</span><span class="p">,</span><span class="w"> </span><span class="mf">700</span><span class="p">,</span><span class="w"> </span><span class="mf">400</span><span class="p">,</span><span class="w"> </span><span class="mf">750</span><span class="p">]</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>reportsコマンドに与えるレンダリング・パラメータは，JSON形式で作成します。</p>
+<p>JSONでは，辞書要素を“{キー1: 値1, キー2: 値2, … キーn: 値n }”と表記し，リスト要素を“[ 値1, 値2, … 値n ]”と表記します。</p>
+<p>レンダリング・パラメータのトップレベルの要素としてtemplateとcontextがあります。</p>
+<p>template辞書は，本来はPDFテンプレート・ファイルのパス名を記述する場所ですが，今回はテンプレートを使用せずに空のページを新規に生成しますので，用紙のサイズのみをpaper属性で指定します。</p>
+<p>context辞書では，フィールド名を「キー」にフィールド属性を「値」として辞書要素を列挙します。ここでは，“hello”がフィールド名に，“{ &quot;new&quot;: &quot;Tx&quot;, &quot;value&quot;: &quot;Hello, World!&quot;, &quot;rect&quot;: [100, 700, 400, 750] }”がフィールド属性にそれぞれ対応します。</p>
+<p>PDFテンプレートを使用していないので本来フィールド名に意味はありませんが，ここでは便宜的に“hello”というフィールド名を付けています。</p>
+<p>フィールド属性のnew要素により，新規にテキストフィールドを作成することを指示します。value属性でフィールドの値を与え，rect属性でフィールドの座標（[左, 下, 右, 上]）を与えます。</p>
+<p>Field Reportsでは，座標系の単位はすべてポイント（pt）で統一しています。1ポイント ＝ 1/72インチ ≒ 0.3528mm ですので，A4タテの用紙であれば，210mm×297mm ≒ 595pt×842pt となります。</p>
+<p>座標系の原点は左下なので，左下の座標が(0, 0)，右上の座標が(595, 842)となります。</p>
+</section>
+<section id="reports">
+<h2>reportsコマンドの実行<a class="headerlink" href="#reports" title="この見出しへのパーマリンク">¶</a></h2>
+<p>以下のコマンドを実行してPDFを作成します。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ reports create hello1.json hello1.pdf
+</pre></div>
+</div>
+<p>ここで，“create”は reports コマンドに与えるサブコマンド，“hello1.json”は先ほど作成したレンダリング・パラメータ，“hello1.pdf”は生成したPDFの保存先ファイル名です。</p>
+<p>実行結果を以下に示します。</p>
+<figure class="align-default" id="id2">
+<img alt="../../_images/%E5%AE%9F%E8%A1%8C%E7%B5%90%E6%9E%9C1.png" src="../../_images/%E5%AE%9F%E8%A1%8C%E7%B5%90%E6%9E%9C1.png" />
+<figcaption>
+<p><span class="caption-text">実行結果</span><a class="headerlink" href="#id2" title="この画像へのパーマリンク">¶</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../../index.html">目次</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../faq/index.html">FAQ / よくある質問</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Tutorial / チュートリアル</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../flow/index.html">PDF帳票作成の流れ</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">スクラッチからの帳票作成</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../template.html">テンプレートを用いた帳票作成</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../recipe.html">Recipe / 調理法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tips.html">Tips / 使いこなしのコツ</a></li>
+</ul>
+
+  <div>
+    <h4>前のトピックへ</h4>
+    <p class="topless"><a href="index.html"
+                          title="前の章へ">スクラッチからの帳票作成</a></p>
+  </div>
+  <div>
+    <h4>次のトピックへ</h4>
+    <p class="topless"><a href="hello2.html"
+                          title="次の章へ">Hello World (2) ― フォントの指定 ―</a></p>
+  </div><h3>クイック検索</h3>
+<form class="search" action="../search.html" method="get">
+  <input type="text" name="q" />
+  <input type="submit" value="検索" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form><h3>外部リンク</h3>
+<ul>
+    <li><a class="reference external" href="http://www.field-works.co.jp/">合同会社フィールドワークス</a></li>
+    <li><a class="reference external" href="http://www.field-works.co.jp/製品情報/">製品情報</a></li>
+    <li><a class="reference external" href="http://www.field-works.co.jp/お問い合わせ/">お問い合わせ</a></li>
+    <li><a class="reference external" href="http://labs.field-works.co.jp/">野外実験室</a></li>
+</ul>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="hello2.html" title="Hello World (2) ― フォントの指定 ―"
+             >次へ</a></li>
+        <li class="right" >
+          <a href="index.html" title="スクラッチからの帳票作成"
+             >前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Field Reports サポートページ</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Tutorial / チュートリアル</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >スクラッチからの帳票作成</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Hello World (1) ― レンダリング・パラメータ ―</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2015, Field Works, LLC.
+    </div>
+  </body>
+</html>

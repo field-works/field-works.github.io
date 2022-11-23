@@ -1,0 +1,225 @@
+
+
+<!doctype html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Tutorial / PDF帳票作成の流れ &#8212; Field Reports サポートページ</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bizstyle.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <script src="../../_static/bizstyle.js"></script>
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="スクラッチからの帳票作成" href="../scratch/index.html" />
+    <link rel="prev" title="PDF帳票作成の流れ" href="index.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../scratch/index.html" title="スクラッチからの帳票作成"
+             accesskey="N">次へ</a></li>
+        <li class="right" >
+          <a href="index.html" title="PDF帳票作成の流れ"
+             accesskey="P">前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Field Reports サポートページ</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Tutorial / チュートリアル</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">PDF帳票作成の流れ</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Tutorial / PDF帳票作成の流れ</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="tutorial-pdf">
+<h1>Tutorial / PDF帳票作成の流れ<a class="headerlink" href="#tutorial-pdf" title="この見出しへのパーマリンク">¶</a></h1>
+<p>写真付き料理レシピの帳票作成を例として，Field Reportsでの帳票作成の手順を説明します。</p>
+<section id="id1">
+<h2>帳票設計<a class="headerlink" href="#id1" title="この見出しへのパーマリンク">¶</a></h2>
+<section id="id2">
+<h3>帳票レイアウトの作成<a class="headerlink" href="#id2" title="この見出しへのパーマリンク">¶</a></h3>
+<p>Microsoft Word, Excelなどのオフィスソフトを使って，PDFテンプレートの下絵となる文書を作成します。その文書を，Adobe Acrobatなどのツールを用いて，PDFファイルに変換します。</p>
+<p>今回は，OfficeソフトとしてOpenOffice.orgのCalcを使用しました。 PDFファイルへの変換は，OpenOffice.orgの標準機能である「PDFとしてエクスポート...」により行ないました。</p>
+<figure class="align-default" id="id6">
+<img alt="../../_images/%E4%B8%8B%E7%B5%B5%E3%81%AE%E4%BD%9C%E6%88%90.jpg" src="../../_images/%E4%B8%8B%E7%B5%B5%E3%81%AE%E4%BD%9C%E6%88%90.jpg" />
+<figcaption>
+<p><span class="caption-text">下絵の作成</span><a class="headerlink" href="#id6" title="この画像へのパーマリンク">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id7">
+<img alt="../../_images/PDF%E3%81%B8%E3%81%AE%E5%A4%89%E6%8F%9B.jpg" src="../../_images/PDF%E3%81%B8%E3%81%AE%E5%A4%89%E6%8F%9B.jpg" />
+<figcaption>
+<p><span class="caption-text">PDFへの変換</span><a class="headerlink" href="#id7" title="この画像へのパーマリンク">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="id3">
+<h3>フィールドの配置<a class="headerlink" href="#id3" title="この見出しへのパーマリンク">¶</a></h3>
+<p>次に，作成したPDFファイルをAdobe AcrobatなどのPDF編集が可能なアプリケーションで開き，フィールドを配置します。</p>
+<p>下図は，Adobe Acrobatを使ってフィールドの配置を行っているところです。この時点で，各フィールドに適切なフィールド名とフォント・フォントサイズ・表示色などの表示属性を設定します。 図の例では，フィールドに仮の値を入力して，表示のバランスを確認しながら作業を進めています。
+テーブル形式のフィールドを作成する際には，「復数のフィールドを配置...」を使用すると便利です。</p>
+<figure class="align-default" id="id8">
+<img alt="../../_images/%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%89%E3%81%AE%E9%85%8D%E7%BD%AE.png" src="../../_images/%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%89%E3%81%AE%E9%85%8D%E7%BD%AE.png" />
+<figcaption>
+<p><span class="caption-text">フィールドの配置</span><a class="headerlink" href="#id8" title="この画像へのパーマリンク">¶</a></p>
+</figcaption>
+</figure>
+<p>すべてのフィールドの配置が終わったら，PDFファイルを保存します。 ここでは，PDFテンプレートのファイル名を‘recipe.pdf’としました。 これで，PDFテンプレートの作成は完了です。</p>
+<figure class="align-default" id="id9">
+<img alt="../../_images/%E5%AE%8C%E6%88%90%E3%81%97%E3%81%9FPDF%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88.png" src="../../_images/%E5%AE%8C%E6%88%90%E3%81%97%E3%81%9FPDF%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88.png" />
+<figcaption>
+<p><span class="caption-text">完成したPDFテンプレート</span><a class="headerlink" href="#id9" title="この画像へのパーマリンク">¶</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="id4">
+<h2>プログラムの作成<a class="headerlink" href="#id4" title="この見出しへのパーマリンク">¶</a></h2>
+<p>レンダリング・パラメータをプログラム内に記述します。
+レンダリング・パラメータは，帳票の構成を定義する部分(template要素)とフィールドに設定する値を指定する部分(context要素)に大きくわかれます。</p>
+<p>template要素には，先ほど作成したPDFテンプレートのパス名を記述します。</p>
+<p>context要素には，フィールドに設定する値を辞書オブジェクトとして構築します。通常この部分には，データベースなどから取得した値を設定すると思いますが，今回は固定値を設定しています。また，以下の例では日本語テキストをUnicode文字列としていますが，通常の文字列を使用する場合は文字コードをUTF-8としてください。</p>
+<p>レンダリングを実行するには，第1引数にレンダリングパラメータを，第2引数に作成するPDF帳票のファイル名を与え，render()関数を呼び出します。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
+<span class="c1"># coding: utf-8</span>
+
+<span class="kn">import</span> <span class="nn">field.reports</span>
+
+<span class="n">param</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;template&quot;</span><span class="p">:</span> <span class="s2">&quot;./recipe.pdf&quot;</span><span class="p">,</span>
+
+    <span class="s2">&quot;context&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="sa">u</span><span class="s2">&quot;たらのムニエルきのこクリームソース&quot;</span><span class="p">,</span> <span class="s2">&quot;color&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">204</span><span class="p">,</span> <span class="mi">102</span><span class="p">,</span> <span class="mi">51</span><span class="p">]},</span>
+        <span class="s2">&quot;heading&quot;</span><span class="p">:</span> <span class="sa">u</span><span class="s2">&quot;表面はカリッと、中はふわふわに仕上げた淡白なたらに、</span><span class="se">\n</span><span class="s2">しめじの旨味を閉じ込めたクリームソースが絶妙に絡みます。&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;photo&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;icon&quot;</span><span class="p">:</span> <span class="s2">&quot;./recipe_photo.jpg&quot;</span><span class="p">},</span>
+        <span class="s2">&quot;time&quot;</span><span class="p">:</span> <span class="sa">u</span><span class="s2">&quot;15分&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cal&quot;</span><span class="p">:</span> <span class="mi">310</span><span class="p">,</span>
+        <span class="s2">&quot;num&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;material&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">[</span><span class="sa">u</span><span class="s2">&quot;たら（切身）&quot;</span><span class="p">,</span> <span class="sa">u</span><span class="s2">&quot;2枚&quot;</span><span class="p">],</span>
+            <span class="p">[</span><span class="sa">u</span><span class="s2">&quot;しめじ&quot;</span><span class="p">,</span> <span class="sa">u</span><span class="s2">&quot;1パック&quot;</span><span class="p">],</span>
+            <span class="p">[</span><span class="sa">u</span><span class="s2">&quot;小麦粉（強力粉）&quot;</span><span class="p">,</span> <span class="sa">u</span><span class="s2">&quot;適量&quot;</span><span class="p">],</span>
+            <span class="p">[</span><span class="sa">u</span><span class="s2">&quot;生クリーム&quot;</span><span class="p">,</span> <span class="sa">u</span><span class="s2">&quot;50cc&quot;</span><span class="p">],</span>
+            <span class="p">[</span><span class="sa">u</span><span class="s2">&quot;卵黄&quot;</span><span class="p">,</span> <span class="sa">u</span><span class="s2">&quot;1個&quot;</span><span class="p">],</span>
+            <span class="p">[</span><span class="sa">u</span><span class="s2">&quot;バター&quot;</span><span class="p">,</span> <span class="s2">&quot;20g&quot;</span><span class="p">],</span>
+            <span class="p">[</span><span class="sa">u</span><span class="s2">&quot;塩&quot;</span><span class="p">,</span> <span class="sa">u</span><span class="s2">&quot;適量&quot;</span><span class="p">],</span>
+            <span class="p">[</span><span class="sa">u</span><span class="s2">&quot;白ワイン&quot;</span><span class="p">,</span> <span class="sa">u</span><span class="s2">&quot;大さじ2&quot;</span><span class="p">],</span>
+            <span class="p">[</span><span class="sa">u</span><span class="s2">&quot;チャービル&quot;</span><span class="p">,</span> <span class="sa">u</span><span class="s2">&quot;適量&quot;</span><span class="p">]</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;procedure&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="sa">u</span><span class="s2">&quot;(1)たらの表面に塩をふり、小麦粉(強力粉)をまぶし、バター50gを入れフライパンで、皮の方から焼く。&quot;</span><span class="p">,</span>
+            <span class="sa">u</span><span class="s2">&quot;(2)焼き上がったら皿に写し、フライパンの余分な油をとる。&quot;</span><span class="p">,</span>
+            <span class="sa">u</span><span class="s2">&quot;(3)残りのバター・白ワイン・しめじを炒め、生クリーム・卵黄を加え軽く火を通す。&quot;</span><span class="p">,</span>
+            <span class="sa">u</span><span class="s2">&quot;(4)(2)に(3)をかけ、チャービルを飾る。&quot;</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;tips&quot;</span><span class="p">:</span> <span class="sa">u</span><span class="s2">&quot;昔、風車を回して小麦粉を作っている人をフランス語で「ムニエ」と呼んでいました。小麦粉を使った料理「ムニエル」は、この「ムニエ」が由来しているそうです。&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">field</span><span class="o">.</span><span class="n">reports</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">param</span><span class="p">,</span> <span class="s2">&quot;menuiere.pdf&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>ここでは，作成したプログラムを‘recipe.py’というファイル名で保存したものとします。 エンコーディングは，UTF-8とします。 画像ファイル‘meuniere_photo.jpg’も同じディレクトリに用意しておきます。
+レンダリングを実行するには，‘recipe.pdf’と‘recipe.py’が存在するディレクトリで，以下のコマンドを実行します。生成されたPDF帳票は，‘meuniere.pdf'に保存されます。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python recipe.py
+</pre></div>
+</div>
+</section>
+<section id="id5">
+<h2>実行結果<a class="headerlink" href="#id5" title="この見出しへのパーマリンク">¶</a></h2>
+<p>完成したPDF帳票のイメージを以下に示します。</p>
+<figure class="align-default" id="id10">
+<img alt="../../_images/%E7%94%9F%E6%88%90%E3%81%95%E3%82%8C%E3%81%9FPDF%E5%B8%B3%E7%A5%A8.png" src="../../_images/%E7%94%9F%E6%88%90%E3%81%95%E3%82%8C%E3%81%9FPDF%E5%B8%B3%E7%A5%A8.png" />
+<figcaption>
+<p><span class="caption-text">生成されたPDF帳票</span><a class="headerlink" href="#id10" title="この画像へのパーマリンク">¶</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../../index.html">目次</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../faq/index.html">FAQ / よくある質問</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Tutorial / チュートリアル</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">PDF帳票作成の流れ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../scratch/index.html">スクラッチからの帳票作成</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../template.html">テンプレートを用いた帳票作成</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../recipe.html">Recipe / 調理法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tips.html">Tips / 使いこなしのコツ</a></li>
+</ul>
+
+  <div>
+    <h4>前のトピックへ</h4>
+    <p class="topless"><a href="index.html"
+                          title="前の章へ">PDF帳票作成の流れ</a></p>
+  </div>
+  <div>
+    <h4>次のトピックへ</h4>
+    <p class="topless"><a href="../scratch/index.html"
+                          title="次の章へ">スクラッチからの帳票作成</a></p>
+  </div><h3>クイック検索</h3>
+<form class="search" action="../search.html" method="get">
+  <input type="text" name="q" />
+  <input type="submit" value="検索" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form><h3>外部リンク</h3>
+<ul>
+    <li><a class="reference external" href="http://www.field-works.co.jp/">合同会社フィールドワークス</a></li>
+    <li><a class="reference external" href="http://www.field-works.co.jp/製品情報/">製品情報</a></li>
+    <li><a class="reference external" href="http://www.field-works.co.jp/お問い合わせ/">お問い合わせ</a></li>
+    <li><a class="reference external" href="http://labs.field-works.co.jp/">野外実験室</a></li>
+</ul>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../scratch/index.html" title="スクラッチからの帳票作成"
+             >次へ</a></li>
+        <li class="right" >
+          <a href="index.html" title="PDF帳票作成の流れ"
+             >前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Field Reports サポートページ</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Tutorial / チュートリアル</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >PDF帳票作成の流れ</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Tutorial / PDF帳票作成の流れ</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2015, Field Works, LLC.
+    </div>
+  </body>
+</html>

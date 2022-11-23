@@ -1,0 +1,303 @@
+
+
+<!doctype html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>更新履歴 &#8212; Field Reports サポートページ</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/bizstyle.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/translations.js"></script>
+    <script src="_static/bizstyle.js"></script>
+    <link rel="search" title="検索" href="search.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="nav-item nav-item-0"><a href="index.html">Field Reports サポートページ</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">更新履歴</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="id1">
+<h1>更新履歴<a class="headerlink" href="#id1" title="この見出しへのパーマリンク">¶</a></h1>
+<section id="id2">
+<h2>2014-06-28 1.5.2版<a class="headerlink" href="#id2" title="この見出しへのパーマリンク">¶</a></h2>
+<dl class="simple">
+<dt>不具合修正</dt><dd><ul class="simple">
+<li><p>キャッシュされたテンプレートファイルの開放処理を修正</p></li>
+<li><p>フォントによってグリフIDがずれる現象に対処（postテーブル解析処理を修正）</p></li>
+</ul>
+</dd>
+<dt>改善</dt><dd><ul class="simple">
+<li><p>.Net Framework 4.0対応（Windows版）</p></li>
+<li><p>PHP Bridgeにおいて，例外発生時のエラーレベルをWARNINGからERRORに変更</p></li>
+<li><p>サンプルを追加（複数ページをスクラッチから作成する例）</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="id3">
+<h2>2013-10-17 1.5.1版<a class="headerlink" href="#id3" title="この見出しへのパーマリンク">¶</a></h2>
+<dl class="simple">
+<dt>不具合修正</dt><dd><ul class="simple">
+<li><p>グリフ名参照文字とGIDのずれを修正</p></li>
+<li><p>PDF画像取得時にページの回転指定を考慮</p></li>
+<li><p>PDF画像の拡大縮小率計算時に，各ページでMediaBoxが異なる場合を考慮</p></li>
+</ul>
+</dd>
+<dt>改善</dt><dd><ul class="simple">
+<li><p>フォント・エンコーディング(UniJIS-UTF16-H/V)への対応を追加</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="id4">
+<h2>2013-08-23 1.5.0版<a class="headerlink" href="#id4" title="この見出しへのパーマリンク">¶</a></h2>
+<dl class="simple">
+<dt>対応アーキテクチャ変更</dt><dd><ul class="simple">
+<li><p>Windows 64bit対応を追加</p></li>
+<li><p>Mac OS X PPC対応を削除</p></li>
+</ul>
+</dd>
+<dt>言語Bridge対応バージョン変更</dt><dd><ul class="simple">
+<li><p>Python 3.3に対応</p></li>
+<li><p>Ruby 2.0に対応</p></li>
+<li><p>PHP 5.5に対応</p></li>
+</ul>
+</dd>
+<dt>機能追加</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt>フォント機能を強化</dt><dd><ul>
+<li><p>ダイナフォント対応</p></li>
+<li><p>埋め込みフォントのデータサイズを圧縮</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>crop-box, bleed-box, trim-box, art-boxエントリを追加</p></li>
+</ul>
+</dd>
+<dt>改善</dt><dd><ul class="simple">
+<li><p>Windows版において日本語ファイル名に対処</p></li>
+<li><p>cairoが出力する不正なPDFへの対策</p></li>
+<li><p>ImageMagickが出力する不正なPDFへの対策</p></li>
+<li><p>テンプレートのグラフィック状態に影響されないように対策</p></li>
+</ul>
+</dd>
+<dt>不具合修正</dt><dd><ul class="simple">
+<li><p>PostScriptプリンタに出力した際に埋込フォントの一部文字が消える不具合を修正</p></li>
+</ul>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>ユーザーズマニュアルを改定</p></li>
+</ul>
+<p>サンプルを追加</p>
+</section>
+<section id="id5">
+<h2>2012-11-08 1.4.3版<a class="headerlink" href="#id5" title="この見出しへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>cairoグラフィックライブラリが出力するPDFの問題に対処</p></li>
+<li><p>ImageMagickが出力するPDFの問題に対処</p></li>
+<li><p>不具合修正</p></li>
+</ul>
+</section>
+<section id="id6">
+<h2>2012-05-16 1.4.2版<a class="headerlink" href="#id6" title="この見出しへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>不具合修正</p></li>
+</ul>
+</section>
+<section id="id7">
+<h2>2012-04-10 1.4.1版<a class="headerlink" href="#id7" title="この見出しへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>不具合修正</p></li>
+</ul>
+</section>
+<section id="id8">
+<h2>2012-01-30 1.4.0版<a class="headerlink" href="#id8" title="この見出しへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>正式版としてリリース</p></li>
+</ul>
+</section>
+<section id="b3">
+<h2>2012-01-21 1.4.0b3版<a class="headerlink" href="#b3" title="この見出しへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>縁取りテキスト表示機能を追加</p></li>
+<li><p>replace書式指定を追加</p></li>
+<li><p>日付書式指定の「月正式名」の数字を半角文字に変更</p></li>
+<li><p>不具合修正</p></li>
+</ul>
+</section>
+<section id="b2">
+<h2>2012-01-06 1.4.0b2版<a class="headerlink" href="#b2" title="この見出しへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>言語Bridgeから使用した際の不具合修正</p></li>
+</ul>
+</section>
+<section id="b1">
+<h2>2012-01-05 1.4.0b1版<a class="headerlink" href="#b1" title="この見出しへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>フォント埋め込み機能追加</p></li>
+<li><p>Unicode拡張漢字対応</p></li>
+<li><p>グリフ直接指定対応</p></li>
+<li><p>縦組みテキスト対応</p></li>
+<li><p>フィールド表示属性の追加</p></li>
+<li><p>透過画像・PDF埋め込み対応</p></li>
+</ul>
+</section>
+<section id="id9">
+<h2>2011-11-07 1.3.1版<a class="headerlink" href="#id9" title="この見出しへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>フォント埋込機能を追加</p></li>
+</ul>
+</section>
+<section id="id10">
+<h2>2011-09-21 1.3版<a class="headerlink" href="#id10" title="この見出しへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>Windows版をリリース</p></li>
+<li><p>.NET Framework Bridgeを追加</p></li>
+<li><p>Java Bridgeを追加</p></li>
+<li><p>C I/Fを変更</p></li>
+</ul>
+</section>
+<section id="id11">
+<h2>2011-07-12 1.2.1版<a class="headerlink" href="#id11" title="この見出しへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>Java Bridge（暫定版）を追加。</p></li>
+<li><p>PHP BridgeでパラメータをJSON文字列で渡した場合の問題に対処した。</p></li>
+</ul>
+</section>
+<section id="id12">
+<h2>2011-07-01 1.2.0版<a class="headerlink" href="#id12" title="この見出しへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>PHP Bridgeを追加。</p></li>
+</ul>
+</section>
+<section id="id13">
+<h2>2011-04-09 1.1.1版<a class="headerlink" href="#id13" title="この見出しへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>Python3.2に対応</p></li>
+</ul>
+</section>
+<section id="id14">
+<h2>2011-04-06 1.1.0版<a class="headerlink" href="#id14" title="この見出しへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>Perl Bridgeを追加。</p></li>
+<li><p>OCaml I/Fを追加。</p></li>
+</ul>
+</section>
+<section id="id15">
+<h2>2011-03-09 1.0.2版<a class="headerlink" href="#id15" title="この見出しへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>サンプルの印影画像ファイルを差し替えた。</p></li>
+<li><p>セレクタ文字列でマイナスのインデックス値を指定した際の不具合を修正した。</p></li>
+</ul>
+</section>
+<section id="id16">
+<h2>2011-03-05 1.0.1版<a class="headerlink" href="#id16" title="この見出しへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>日本語フィールド名に対応</p></li>
+<li><p>OSXのPreview.appで作成したPNGがdeflate処理でエラーを起こす問題に対処した。</p></li>
+<li><p>コマンドラインプログラムのUsage表示を修正した。</p></li>
+</ul>
+</section>
+<section id="id17">
+<h2>2011-02-25 1.0.0版<a class="headerlink" href="#id17" title="この見出しへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>正式版としてリリース</p></li>
+</ul>
+</section>
+<section id="id18">
+<h2>2011-02-14 0.9.2版<a class="headerlink" href="#id18" title="この見出しへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>Ruby Bridgeを追加した。</p></li>
+<li><p>C言語I/F用ヘッダファイルを追加した。</p></li>
+<li><p>同一画像を繰返し使用した場合の処理速度とファイルサイズを改善した。</p></li>
+</ul>
+</section>
+<section id="id19">
+<h2>2011-01-29 0.9.1版<a class="headerlink" href="#id19" title="この見出しへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>サンプルコードを追加した。</p></li>
+<li><p>テンプレート・画像の格納ディレクトリをtemplate-rootで設定できるようにした。</p></li>
+<li><p>環境変数の参照方法を{}から${}へ変更した。</p></li>
+<li><p>レンダリング・パラメータのエラーチェックを強化した。</p></li>
+<li><p>同名フィールドが存在する場合のフォントリソース取得方法を改善した。</p></li>
+<li><p>連続運転時の安定性を改善した。</p></li>
+</ul>
+</section>
+<section id="id20">
+<h2>2011-01-17 0.9.0版<a class="headerlink" href="#id20" title="この見出しへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>β版としてリリース</p></li>
+</ul>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">目次</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="faq/index.html">FAQ / よくある質問</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/index.html">Tutorial / チュートリアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recipe.html">Recipe / 調理法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tips.html">Tips / 使いこなしのコツ</a></li>
+</ul>
+<h3>クイック検索</h3>
+<form class="search" action="../search.html" method="get">
+  <input type="text" name="q" />
+  <input type="submit" value="検索" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form><h3>外部リンク</h3>
+<ul>
+    <li><a class="reference external" href="http://www.field-works.co.jp/">合同会社フィールドワークス</a></li>
+    <li><a class="reference external" href="http://www.field-works.co.jp/製品情報/">製品情報</a></li>
+    <li><a class="reference external" href="http://www.field-works.co.jp/お問い合わせ/">お問い合わせ</a></li>
+    <li><a class="reference external" href="http://labs.field-works.co.jp/">野外実験室</a></li>
+</ul>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="nav-item nav-item-0"><a href="index.html">Field Reports サポートページ</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">更新履歴</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2015, Field Works, LLC.
+    </div>
+  </body>
+</html>

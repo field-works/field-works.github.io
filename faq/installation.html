@@ -1,0 +1,273 @@
+
+
+<!doctype html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>インストールに関する質問 &#8212; Field Reports サポートページ</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bizstyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script src="../_static/bizstyle.js"></script>
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="利用方法" href="usage.html" />
+    <link rel="prev" title="ご購入にあたっての質問" href="general.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="usage.html" title="利用方法"
+             accesskey="N">次へ</a></li>
+        <li class="right" >
+          <a href="general.html" title="ご購入にあたっての質問"
+             accesskey="P">前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Field Reports サポートページ</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">FAQ / よくある質問</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">インストールに関する質問</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="id1">
+<h1>インストールに関する質問<a class="headerlink" href="#id1" title="この見出しへのパーマリンク">¶</a></h1>
+<nav class="contents local" id="id2">
+<p class="topic-title">質問一覧</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#pythondistribute" id="id5">PythonのDistributeのインストールに失敗します</a></p></li>
+<li><p><a class="reference internal" href="#id3" id="id6">初期設定ファイルがありません</a></p></li>
+<li><p><a class="reference internal" href="#linuxlibcurl" id="id7">Linux版のインストール時にlibcurl関連のエラーが発生します</a></p></li>
+<li><p><a class="reference internal" href="#rpm" id="id8">rpmコマンドでバージョンアップできません</a></p></li>
+<li><p><a class="reference internal" href="#pythonbridge" id="id9">Python言語Bridgeのインポートに失敗します</a></p></li>
+<li><p><a class="reference internal" href="#id4" id="id10">ライセンスキーが認識されません</a></p></li>
+<li><p><a class="reference internal" href="#debianlinux" id="id11">Debian系のLinuxにインストールできますか？</a></p></li>
+<li><p><a class="reference internal" href="#centos-7" id="id12">CentOS 7へのインストール時にエラーが発生します</a></p></li>
+</ul>
+</nav>
+<section id="pythondistribute">
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">PythonのDistributeのインストールに失敗します</a><a class="headerlink" href="#pythondistribute" title="この見出しへのパーマリンク">¶</a></h2>
+<p>Pythonをソースからビルドした場合，ビルド時の環境によってはzlibモジュールが組み込まれないことがあるようです。
+その場合には，以下のようなエラーメッセージが出力されます。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">File</span> <span class="s2">&quot;/usr/local/lib/python2.7/zipfile.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">651</span><span class="p">,</span> <span class="ow">in</span> <span class="fm">__init__</span>
+  <span class="s2">&quot;Compression requires the (missing) zlib module&quot;</span>
+<span class="ne">RuntimeError</span><span class="p">:</span> <span class="n">Compression</span> <span class="n">requires</span> <span class="n">the</span> <span class="p">(</span><span class="n">missing</span><span class="p">)</span> <span class="n">zlib</span> <span class="n">module</span>
+</pre></div>
+</div>
+<p>以下に示す方法で，Pythonをインストールし直してください。</p>
+<ol class="arabic simple">
+<li><p>zlibのヘッダファイルとライブラリをインストールする。</p></li>
+</ol>
+<p>CentOSの場合，“zlib-devel”というパッケージ名で導入できます（Debian系では“zlib1g-dev“）。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># yum install zlib-devel</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Pythonを再ビルドする。</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># ./configure</span>
+<span class="c1"># make</span>
+<span class="c1"># make install</span>
+</pre></div>
+</div>
+<p>この方法で解決しない場合は，例えばCentOS 5.5 に Python 2.6.6 をインストール 等を参考にして，以下の方法を試みてください。</p>
+<ol class="arabic simple" start="3">
+<li><p>configure時に共有ライブラリを有効にする。</p></li>
+<li><p>Modules/Setupを修正して，zlibモジュールを有効にする。</p></li>
+</ol>
+</section>
+<section id="id3">
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">初期設定ファイルがありません</a><a class="headerlink" href="#id3" title="この見出しへのパーマリンク">¶</a></h2>
+<p>初期設定ファイルはインストーラにより作成されませんので，テキストエディタ等を使って手動で作成してください。</p>
+</section>
+<section id="linuxlibcurl">
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">Linux版のインストール時にlibcurl関連のエラーが発生します</a><a class="headerlink" href="#linuxlibcurl" title="この見出しへのパーマリンク">¶</a></h2>
+<p>Field Reportsはlibcurlに依存しています。
+libcurlパッケージがインストールされていないと，インストール時に下記のようなエラーが出力されます。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo rpm -ivh reports-1.4-3.x86_64.rpm
+エラー: Failed dependencies:
+    libcurl.so.4()(64bit) is needed by reports-1.4-3.x86_64
+</pre></div>
+</div>
+<p>ご使用中のLinuxディストリビューションで利用できるパッケージ管理ツールを使ってlibcurlをインストールしてください。</p>
+<p>CentOSでの実行例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo yum install curl-devel
+</pre></div>
+</div>
+<p>自前でlibcurlをインストールした場合には，rpmコマンドに“--nodeps”オプションを付けて実行してください。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo rpm -ivh --nodeps reports-x.x-x.xxxx.rpm
+</pre></div>
+</div>
+</section>
+<section id="rpm">
+<h2><a class="toc-backref" href="#id8" role="doc-backlink">rpmコマンドでバージョンアップできません</a><a class="headerlink" href="#rpm" title="この見出しへのパーマリンク">¶</a></h2>
+<p>旧バージョンのField Reportsをアンインストールしてから新バージョンをインストールしてください。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo rpm -e reports
+</pre></div>
+</div>
+</section>
+<section id="pythonbridge">
+<h2><a class="toc-backref" href="#id9" role="doc-backlink">Python言語Bridgeのインポートに失敗します</a><a class="headerlink" href="#pythonbridge" title="この見出しへのパーマリンク">¶</a></h2>
+<p>field.reportsライブラリのインポート時に次のような例外が発生することがあります。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">field.reports</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+<span class="gr">ImportError</span>: <span class="n">/usr/lib/python2.6/site-packages/field.reports-1.5-py2.6-linux-x86_64.egg/field/reports.so: undefined symbol: PyUnicodeUCS2_AsUTF8String</span>
+</pre></div>
+</div>
+<p>そのような場合には，Python言語Bridgeをソースからビルドしてインストールしなおしてください。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ tar xvzf field.reports-x.x.tar.gz
+$ cd field.reports-x.x
+$ sudo python setup.py install
+</pre></div>
+</div>
+</section>
+<section id="id4">
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">ライセンスキーが認識されません</a><a class="headerlink" href="#id4" title="この見出しへのパーマリンク">¶</a></h2>
+<p>発行されたシリアル番号とライセンスキーを初期設定ファイルに登録しても生成されるPDFから(TRIAL)の赤文字が消えない場合には，以下の確認を行ってください。</p>
+<ol class="arabic simple">
+<li><p>reportsコマンドでは(TRIAL)の文字が消える場合</p></li>
+</ol>
+<p>コンソールからreportsコマンドを実行したときは(TRIAL)の文字が消えるがPHP等から実行した時には消えない場合には， 初期設定ファイルのアクセス権限をご確認ください。
+PHPはApacheなどのWebサーバのプロセスから実行されます。
+Webサーバの実行ユーザ（apache, http, wwwなど）から初期設定ファイルが見えない設定になっていないか確認してください。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ls -l /etc/reports.conf
+</pre></div>
+</div>
+<p>読み出しの実行権限が不足しているようでしたら，chmodでアクセス権を追加するか，chownでオーナーを変更するなどしてアクセス権限を与えてください。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo chmod a+r /etc/reports.conf
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>reportsコマンドでも(TRIAL)の文字が消えない場合</p></li>
+</ol>
+<p>以下のような原因が考えられます。</p>
+<ul class="simple">
+<li><p>ライセンスキーの発行ミス</p></li>
+<li><p>メール配信過程での文字化け</p></li>
+<li><p>ライセンスキーを初期設定ファイルへコピーする際の一分文字の欠損</p></li>
+</ul>
+<p>いすれにしてもサポート窓口までお問い合わせください。</p>
+</section>
+<section id="debianlinux">
+<h2><a class="toc-backref" href="#id11" role="doc-backlink">Debian系のLinuxにインストールできますか？</a><a class="headerlink" href="#debianlinux" title="この見出しへのパーマリンク">¶</a></h2>
+<p>Linux版Field ReportsはインストールファイルをRPM形式で提供しています。
+UbuntuなどDebian系のLinuxにRPM形式のパッケージをインストールするためには，
+alienというコマンドを使用するのが簡単です。</p>
+<p>まず，alianコマンドをインストールします。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># apt-get install alien</span>
+</pre></div>
+</div>
+<p>次に，alienコマンドでRPMパッケージをインストールします。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># alien -i reports-x.x-x.&lt;アーキテクチャ&gt;.rpm</span>
+</pre></div>
+</div>
+<p>ただし，共有ライブラリがDebianの標準と異なる場所（x86_64アーキテクチャの場合は“/usr/lib64”）にインストールされることに注意してください。
+必要に応じて，共有ライブラリへのパスを設定してください。</p>
+<ul class="simple">
+<li><p>環境変数 LD_LIBRARY_PATH を用いて，個人単位のパスを設定する。</p></li>
+<li><p>/etc/ld.so.conf にシステム全体の設定を追加する。</p></li>
+</ul>
+</section>
+<section id="centos-7">
+<h2><a class="toc-backref" href="#id12" role="doc-backlink">CentOS 7へのインストール時にエラーが発生します</a><a class="headerlink" href="#centos-7" title="この見出しへのパーマリンク">¶</a></h2>
+<p>CentOS 7.xまたはRedHat Linux 7.xにField Reportsをインストールする際に，下記のようなエラーが発生する場合があります。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># rpm -ivh reports-1.5.2-x86_64.rpm
+Preparing...                          ################################# [100%]
+file /usr/bin from install of reports-1.5.2-0.x86_64 conflicts with file from package filesystem-3.2-18.el7.x86_64
+file /usr/lib64 from install of reports-1.5.2-0.x86_64 conflicts with file from package filesystem-3.2-18.el7.x86_64﻿
+</pre></div>
+</div>
+<p>インストール先の/usr/binなどのディレクトリのパーミッションが，rpmをパッケージしたときの想定と異なる場合にこのようなエラーが発生するようです。</p>
+<p>rpmコマンドに <code class="docutils literal notranslate"><span class="pre">--force</span></code> オプションまたは <code class="docutils literal notranslate"><span class="pre">--replacefiles</span></code> オプションを付けることでエラーを回避できます。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># rpm --force -ivh reports-1.5.2-x86_64.rpm</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">目次</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FAQ / よくある質問</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="general.html">ご購入にあたっての質問</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">インストールに関する質問</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html">利用方法</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/index.html">Tutorial / チュートリアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../recipe.html">Recipe / 調理法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tips.html">Tips / 使いこなしのコツ</a></li>
+</ul>
+
+  <div>
+    <h4>前のトピックへ</h4>
+    <p class="topless"><a href="general.html"
+                          title="前の章へ">ご購入にあたっての質問</a></p>
+  </div>
+  <div>
+    <h4>次のトピックへ</h4>
+    <p class="topless"><a href="usage.html"
+                          title="次の章へ">利用方法</a></p>
+  </div><h3>クイック検索</h3>
+<form class="search" action="../search.html" method="get">
+  <input type="text" name="q" />
+  <input type="submit" value="検索" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form><h3>外部リンク</h3>
+<ul>
+    <li><a class="reference external" href="http://www.field-works.co.jp/">合同会社フィールドワークス</a></li>
+    <li><a class="reference external" href="http://www.field-works.co.jp/製品情報/">製品情報</a></li>
+    <li><a class="reference external" href="http://www.field-works.co.jp/お問い合わせ/">お問い合わせ</a></li>
+    <li><a class="reference external" href="http://labs.field-works.co.jp/">野外実験室</a></li>
+</ul>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="usage.html" title="利用方法"
+             >次へ</a></li>
+        <li class="right" >
+          <a href="general.html" title="ご購入にあたっての質問"
+             >前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Field Reports サポートページ</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FAQ / よくある質問</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">インストールに関する質問</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2015, Field Works, LLC.
+    </div>
+  </body>
+</html>
