@@ -1,3 +1,0 @@
-[submodule "build/html"]
-	path = build/html
-	url = https://github.com/field-works/field-works.github.io.git
